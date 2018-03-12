@@ -1,0 +1,80 @@
+package com.shi.tony.chinesefood;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Button;
+import android.view.View;
+
+
+public class chinesefood extends AppCompatActivity {
+
+    private EditText etEnterChoices;
+    private TextView tvRestuarantName;
+    private Button btnCompute;
+    private Button btnReset;
+    private Button btnMenu;
+
+    private int Price;
+    private String name;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_chinesefood);
+        etEnterChoices = (EditText) findViewById(R.id.etEnterChoices); // like VB Textbox
+        tvRestuarantName = (TextView) findViewById(R.id.tvResturantName);       // like VB Label
+        btnCompute = (Button) findViewById(R.id.btnCompute);       // like VB Button
+        btnReset = (Button) findViewById(R.id.btnReset);
+        btnMenu = (Button) findViewById(R.id.btnMenu);
+
+        btnMenu.setOnClickListener(new Button.OnClickListener()
+        {
+
+            public void onClick(View v)
+            {
+
+            }
+
+        });
+        btnCompute.setOnClickListener(new Button.OnClickListener()
+        {
+
+            public void onClick(View v)
+            {
+
+            }
+
+        });
+
+        btnCompute.setOnClickListener(new Button.OnClickListener()
+        {
+
+            public void onClick(View v)
+            {
+
+            }
+
+        });
+
+
+        btnReset.setOnClickListener(new Button.OnClickListener()
+        {
+
+            public void onClick(View v)
+            {
+
+            }
+
+        });
+    }
+    public String dishChoice()
+    {
+        name = etEnterChoices.getText().toString();
+
+        return "";
+    }
+
+}
