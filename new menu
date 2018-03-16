@@ -1,0 +1,65 @@
+public class Menu extends chinesefood {
+    private int menuPrice;
+    private String menuName;
+    private String selectedChoice;
+    private String dish1[] = {"", "", ""};
+    private String dish2[] = {"", "", ""};
+    private String dish3[] = {"", "", ""};
+    private String dish4[] = {"", "", ""};
+    private String dish5[] = {"", "", ""};
+    private String dish6[] = {"", "", ""};
+    private String dish7[] = {"", "", ""};
+    private String dish8[] = {"", "", ""};
+    private String dish9[] = {"", "", ""};
+    private String dish10[] = {"", "", ""};
+    private String dishName[] = {"","","","","",""};
+
+    public void DishInfoAppetizers()
+    {
+        dish1[1] = "fried dumplings";
+        dish1[2] = "5.75";
+        dish1[3] = "";
+
+        dish2[1] = "shrimp roll";
+        dish2[2] = "1.50";
+        dish2[3] = "";
+
+        dish3[1] = "spring roll";
+        dish3[2] = "1.50";
+        dish3[3] = "";
+
+        dish3[1] = "egg roll";
+        dish3[2] = "1.50";
+        dish3[3] = "";
+
+        dish4[1] = "boneless spare ribs";
+        dish4[2] = "13.95";
+        dish4[3] = "";
+
+        dish5[1] = "crab rangoon";
+        dish5[2] = "5.00";
+        dish5[3] = "";
+
+        dish6[1] = "pu pu platter";
+        dish6[2] = "13.00";
+        dish6[3] = "";
+
+        dish7[1] = "chicken lettuce wrap";
+        dish7[2] = "8.00";
+        dish7[3] = "";
+    }
+    public void DishInfoPork()
+    {
+
+    }
+    public void DishInfoSoup()
+    {
+
+    }
+
+    public String chooseDishes(int dishID)
+    {
+        selectedChoice = dishChoice();
+        return menuName;
+    }
+}
