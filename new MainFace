@@ -1,0 +1,93 @@
+package com.tonyxr.chinapenn1;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Button;
+import android.view.View;
+import android.widget.Toast;
+import android.content.Context;
+
+
+public class MainFace extends AppCompatActivity {
+
+    private EditText etEnterChoices;
+    private TextView tvRestuarantName;
+    private Button btnCompute;
+    private Button btnReset;
+    private Button btnMenu;
+    private TextView tvPriceAmount;
+    private int price = 0;
+    private String name;
+    private String actualName;
+    private String priceText;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Menu a = new Menu();
+        setContentView(R.layout.activity_main_face);
+        etEnterChoices = (EditText) findViewById(R.id.etEnterChoices); // like VB Textbox
+        tvRestuarantName = (TextView) findViewById(R.id.tvRestuarantName);       // like VB Label
+        btnCompute = (Button) findViewById(R.id.btnCompute);       // like VB Button
+        btnReset = (Button) findViewById(R.id.btnReset);
+        btnMenu = (Button) findViewById(R.id.btnMenu);
+        tvPriceAmount = (TextView) findViewById(R.id.tvPriceAmount);
+
+
+        btnMenu.setOnClickListener(new Button.OnClickListener()
+        {
+
+            public void onClick(View v)
+            {
+
+            }
+
+        });
+        btnCompute.setOnClickListener(new Button.OnClickListener()
+        {
+            Context context = getApplicationContext();
+            public void onClick(View v)
+            {
+                tvPriceAmount.setText(actualName);
+                CharSequence text = "Your have ordered: " + actualName + "/nAnd the price is: " + price + "";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+            }
+
+        });
+
+
+        btnReset.setOnClickListener(new Button.OnClickListener()
+        {
+
+            public void onClick(View v)
+            {
+                tvPriceAmount.setText("");
+                etEnterChoices.setText("");
+                price = 0;
+                actualName = "";
+            }
+
+        });
+    }
+    public String dishChoice()
+    {
+        name = etEnterChoices.getText().toString();
+        return name;
+    }
+    public class calculation extends Menu
+    {
+        public void priceCalculation()
+        {
+            price += dishPrice();
+            actualName = chooseDishes();
+        }
+
+    }
+
+}
+
