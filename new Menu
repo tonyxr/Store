@@ -1,0 +1,112 @@
+package com.tonyxr.chinapenn1;
+
+/**
+ * Created by tonyshi on 3/15/18.
+ */
+
+/**
+ * Created by 301195 on 2/21/18.
+ * [1] is dish name
+ * [2] is price
+ * [3] is make up materils
+ */
+import java.util.List;
+import java.lang.Object;
+import java.lang.Integer;
+
+public class Menu extends MainFace {
+    private int menuPrice;
+    private String menuName;
+    private String selectedChoice;
+    private String dish1[] = {"", "", ""};
+    private String dish2[] = {"", "", ""};
+    private String dish3[] = {"", "", ""};
+    private String dish4[] = {"", "", ""};
+    private String dish5[] = {"", "", ""};
+    private String dish6[] = {"", "", ""};
+    private String
+
+            dish7[] = {"", "", ""};
+    private String dish8[] = {"", "", ""};
+    private String dish9[] = {"", "", ""};
+    private String dish10[] = {"", "", ""};
+    private String dishName[] = {"", "", "", "", "", ""};
+
+    public void DishInfoAppetizers() {
+        dish1[1] = "fried dumplings";
+        dish1[2] = "5.75";
+        dish1[3] = "1";
+
+        dish2[1] = "shrimp roll";
+        dish2[2] = "1.50";
+        dish2[3] = "2";
+
+        dish3[1] = "spring roll";
+        dish3[2] = "1.50";
+        dish3[3] = "3";
+
+        dish4[1] = "egg roll";
+        dish4[2] = "1.50";
+        dish4[3] = "4";
+
+        dish5[1] = "boneless spare ribs";
+        dish5[2] = "13.95";
+        dish5[3] = "5";
+
+        dish6[1] = "crab rangoon";
+        dish6[2] = "5.00";
+        dish6[3] = "6";
+
+        dish7[1] = "pu pu platter";
+        dish7[2] = "13.00";
+        dish7[3] = "7";
+
+        dish8[1] = "chicken lettuce wrap";
+        dish8[2] = "8.00";
+        dish8[3] = "8";
+    }
+
+    public void dishDetermine() {
+        selectedChoice = dishChoice();
+        if (selectedChoice.equals("chicken lettuce wrap") || selectedChoice.indexOf("chicken") > 1 || selectedChoice.indexOf("lettuce") > 1 || selectedChoice.indexOf("wrap") > 1 || selectedChoice.indexOf("lettuce wrap") > 1) {
+            menuName = dish8[1];
+            menuPrice = Integer.parseInt(dish8[2]);
+        }
+        if (selectedChoice.equals("pu pu platter") || selectedChoice.indexOf("platter") > 1 || selectedChoice.indexOf("pu pu") > 1) {
+            menuName = dish7[1];
+            menuPrice = Integer.parseInt(dish7[2]);
+        }
+        if (selectedChoice.equals("crab rangoon") || selectedChoice.indexOf("crab") > 1 || selectedChoice.indexOf("rangoon") > 1) {
+            menuName = dish6[1];
+            menuPrice = Integer.parseInt(dish6[2]);
+        }
+        if (selectedChoice.equals("boneless spare ribs") || selectedChoice.indexOf("spare ribs") > 1 || selectedChoice.indexOf("ribs") > 1) {
+            menuName = dish5[1];
+            menuPrice = Integer.parseInt(dish5[2]);
+        }
+        if (selectedChoice.equals("egg roll") || selectedChoice.indexOf("egg") > 1) {
+            menuName = dish4[1];
+            menuPrice = Integer.parseInt(dish4[2]);
+        }
+        if (selectedChoice.equals("spring roll") || selectedChoice.indexOf("spring") > 1) {
+            menuName = dish3[1];
+            menuPrice = Integer.parseInt(dish3[2]);
+        }
+        if (selectedChoice.equals("shrimp roll") || selectedChoice.indexOf("shrimp") > 1) {
+            menuName = dish2[1];
+            menuPrice = Integer.parseInt(dish2[2]);
+        }
+        if (selectedChoice.equals("fried dumplings") || selectedChoice.indexOf("fried") > 1 || selectedChoice.indexOf("dumplings") > 1) {
+            menuName = dish1[1];
+            menuPrice = Integer.parseInt(dish1[2]);
+        }
+    }
+
+    public String chooseDishes() {
+        return menuName;
+    }
+
+    public int dishPrice() {
+        return menuPrice;
+    }
+}
